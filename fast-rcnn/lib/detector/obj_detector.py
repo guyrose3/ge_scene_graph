@@ -18,7 +18,8 @@ import os
 import scipy.io as sio
 import scipy.sparse
 from selective_search.calc_wrapper import calc_selective_search
-from sklearn import svm
+#guyr_debug-svm from sklearn not needed
+#from sklearn import svm
 
 class detector(object):
 
