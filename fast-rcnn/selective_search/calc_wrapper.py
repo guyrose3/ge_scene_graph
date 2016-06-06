@@ -49,7 +49,6 @@ if paths.USE_MATLAB_SELECTIVE_SEARCH==True:
 		status = subprocess.call(cmd, shell=True)
 
 else:
-	import selectivesearch
 	def calc_selective_search(images_file,mat_file):
 		return NotImplemented
 		#TODO-continue and match to fast-rcnn format
