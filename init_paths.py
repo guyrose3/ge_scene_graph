@@ -14,11 +14,11 @@ def add_path(path):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-this_dir = osp.dirname(osp.abspath(__file__))
+PROJECT_ROOT = osp.dirname(osp.abspath(__file__))
 #base paths-should be changed to match local paths
 FAST_RCNN_BASE = '/home/guy/thesis/gen_scene_graph/fast-rcnn'
 DATASETS_BASE = '/home/guy/thesis/gen_scene_graph/data_tmp/'
-CAFFE_DETECTORS_BASE = osp.join(this_dir,'caffe_detectors')
+CAFFE_DETECTORS_BASE = osp.join(PROJECT_ROOT,'caffe_detectors')
 USE_MATLAB_SELECTIVE_SEARCH = False
 
 # Add caffe to PYTHONPATH
