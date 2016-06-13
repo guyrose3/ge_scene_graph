@@ -81,9 +81,10 @@ class v1_object(object):
 				im_boxes = boxes[i]
 			else:
 				im_boxes = get_obj_proposals(image_path)
-		#run detector
-		detections.append(self.detector.detect_single_aux(image_path,im_boxes))
-		if boxes is None: out_boxes.append(im_boxes)
+			#run detector
+			self.detector.detect_single_aux(image_path, im_boxes)
+			detections.append(self.detector.detections)
+			if boxes is None: out_boxes.append(im_boxes)
 
 		if boxes==None: return (detections,out_boxes)
 		else:			return detections
